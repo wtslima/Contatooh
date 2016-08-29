@@ -1,0 +1,41 @@
+<!--public/partials/contatos.html-->
+<div class="page-header">
+    <h2>
+    Lista de Contatos
+    </h1>
+</div>
+
+<p class="alert alert-danger" ng-show="mensagem.texto"><strong>
+    {{mensagem.texto}}</strong>
+</p>
+
+<a ng-href="#/contato" class="btn btn-primary"> Novo Contato</a>
+<br><br>
+<input ng-model="filtro" type="search" placeholder="parte do nome">
+<br><br>
+<p ng-show="contatos.length"><strong>Contatos cadastrados: {{contatos.length}}</strong></p>
+<p class="text-info" ng-hide="contatos.length"><strong>Não há contatos cadastrados</strong></p>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tr>
+            <th>NOME</th>
+            <th>EMAIL</th>
+            <th class="text-center">Ação</th>
+        </tr>
+        <tr ng-repeat="contato in contatos | filter: filtro">
+            <td>
+                <a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+            </td>
+            <td>
+                {{contato.email}}
+            </td>
+            <td class="text-center">
+            <button ng-click="remove(contato)"
+             class="btn btn-danger">
+                Remover
+            </button>
+            </td>
+        </tr>
+    </table>
+</div>
+

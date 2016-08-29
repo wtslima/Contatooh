@@ -1,0 +1,39 @@
+<!--public/index-->
+<!DOCTYPE html>
+<html ng-app="contatooh" lang="pt-br" >
+    <head>
+        <title>Contatooh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+   
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap-theme.css">
+
+    </head>
+   
+    <body>
+        
+        <div class="container"> 
+          
+             <header>
+                 <img src="images/CONTATOOH.png" class="img-responsive" alt="Chania">
+             </header>
+
+        <div ng-view></div>
+            
+        <script src="vendor/angular/angular.js"></script>
+	    <script src="vendor/angular-route/angular-route.js"></script>
+        <script src="vendor/angular-resource/angular-resource.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/services/ContatoService.js"></script>
+        <script src="js/controllers/ContatosController.js"></script>
+        <script src="js/controllers/ContatoController.js"></script>
+
+         <footer class="text-center">
+        <small>Contatooh - É um projeto exemplo utilizado como didática no livro: <a href="http://www.casadocodigo.com.br/products/livro-nodejs" 
+        target="_blank">Aplicações web real-time com Node.js</a></small>
+      </footer>
+        
+        </div>
+    </body>
+</html> 
